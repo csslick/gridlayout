@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="arthor" content="csslick">
+	<title>CSSLICK Fluid Layout</title>
+	<style>
+		*{ 
+			margin: 0; padding: 0;
+			box-sizing: border-box;
+		}
+		/* 
+			gutter size: 10px/960px = 1.04% 
+		*/
+		[class^=col]{
+			float: left; 
+			padding: 20px;
+		}
+		.col1{ width: 100%; }
+		.col2{ 
+			width: 49.48%; 
+			margin-right: 1.04%;
+		}
+		.col3{ 
+			width: 32.64%; 
+			margin-right: 1.04%;
+		}
+		.col2:last-child,
+		.col3:last-child{ margin-right: 0; }
+
+		.container{
+			width: 100%;
+			max-width: 1200px;
+			min-width: 768px;
+			margin: 0 auto;
+			overflow: hidden;
+			clear: both;
+		}
+		header{
+			background: #ccc;
+		}
+		article{
+			border: 1px solid #666;
+		}
+
+	</style>
+</head>
+<body>
+	<header class="container">
+		<div class="col1">col1</div>
+	</header>
+	<section class="container">
+		<article class="col2">col2</article>
+		<article class="col2">col2</article>
+	</section>	
+	<section class="container">
+		<article class="col3">col3</article>
+		<article class="col3">col3</article>
+		<article class="col3">col3</article>
+	</section>
+	<div class="container">
+		<div class="col2" style="background: pink;">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore accusantium dolores rerum, ab nisi minus aspernatur laborum omnis alias animi temporibus commodi libero, consectetur iste tenetur ratione numquam natus. Porro!
+		</div>
+		<div class="col2" style="background:green;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, eveniet.</div>
+	</div>
+	<section class="container">
+		<article class="col3">col3</article>
+		<article class="col3">col3</article>
+		<article class="col3">col3</article>
+	</section>
+
+</body>
+</html>
